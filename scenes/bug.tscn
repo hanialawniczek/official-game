@@ -1,0 +1,117 @@
+[gd_scene load_steps=22 format=3 uid="uid://c6qeu5ptu18c4"]
+
+[ext_resource type="Script" path="res://scripts/bug.gd" id="1_453fb"]
+[ext_resource type="Texture2D" uid="uid://c8oi3mmlj6hdt" path="res://assets/bug/Timeline 1_0000.png" id="2_jguem"]
+[ext_resource type="Texture2D" uid="uid://c5d1b45dqhmx6" path="res://assets/bug/Timeline 1_0002.png" id="3_kmnl1"]
+[ext_resource type="Texture2D" uid="uid://byxxa4mjlafow" path="res://assets/bug/Timeline 1_0004.png" id="4_jx1ms"]
+[ext_resource type="Texture2D" uid="uid://danh46nivrly0" path="res://assets/bug/Timeline 1_0006.png" id="5_pqhhm"]
+[ext_resource type="Texture2D" uid="uid://3h6vdvlkxu8m" path="res://assets/bug/Timeline 1_0008.png" id="6_dng5s"]
+[ext_resource type="Texture2D" uid="uid://7sh8j4up0gj6" path="res://assets/bug/Timeline 1_0010.png" id="7_wlexp"]
+[ext_resource type="Texture2D" uid="uid://4wkj42fd56nd" path="res://assets/bug/Timeline 1_0012.png" id="8_8phjm"]
+[ext_resource type="Texture2D" uid="uid://b6med1v2u1g74" path="res://assets/bug/Timeline 1_0014.png" id="9_v1q3b"]
+[ext_resource type="Texture2D" uid="uid://dfs76fsea6fcy" path="res://assets/bug/Timeline 1_0016.png" id="10_dafls"]
+[ext_resource type="Texture2D" uid="uid://col5xmltwfpco" path="res://assets/bug/Timeline 1_0018.png" id="11_s1l0l"]
+[ext_resource type="Texture2D" uid="uid://dwqcow7pss2sh" path="res://assets/bug/Timeline 1_0020.png" id="12_yuony"]
+[ext_resource type="Texture2D" uid="uid://m2mpftim3ccj" path="res://assets/bug/Timeline 1_0022.png" id="13_5oe15"]
+[ext_resource type="Texture2D" uid="uid://dyhc1u36phpdc" path="res://assets/bug/Timeline 1_0024.png" id="14_c2l83"]
+[ext_resource type="Texture2D" uid="uid://dfenabiffw6nj" path="res://assets/bug/Timeline 1_0026.png" id="15_jegho"]
+[ext_resource type="Texture2D" uid="uid://ba7a5irko7m32" path="res://assets/bug/Timeline 1_0028.png" id="16_ybefy"]
+[ext_resource type="Texture2D" uid="uid://bx6v8vtrii7et" path="res://assets/bug/Timeline 1_0030.png" id="17_id05j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f2oly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jguem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kmnl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jx1ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pqhhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dng5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wlexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8phjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v1q3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dafls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_s1l0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yuony")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5oe15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_c2l83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jegho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ybefy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_id05j")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3iig3"]
+radius = 40.0
+height = 152.052
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3m2jk"]
+radius = 51.0
+height = 176.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aiqi8"]
+radius = 2021.83
+
+[node name="bug" type="CharacterBody2D" groups=["Characters"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_453fb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f2oly")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.335939
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-20, 46)
+rotation = -0.614061
+shape = SubResource("CapsuleShape2D_3iig3")
+
+[node name="dmg" type="Area2D" parent="."]
+
+[node name="death" type="CollisionShape2D" parent="dmg"]
+position = Vector2(-21, 45)
+rotation = -0.603354
+shape = SubResource("CapsuleShape2D_3m2jk")
+
+[node name="tracking" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tracking"]
+shape = SubResource("CircleShape2D_aiqi8")
+
+[connection signal="body_entered" from="dmg" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="tracking" to="." method="_on_tracking_body_entered"]
+[connection signal="body_exited" from="tracking" to="." method="_on_tracking_body_exited"]

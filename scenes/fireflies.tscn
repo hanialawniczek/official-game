@@ -1,0 +1,87 @@
+[gd_scene load_steps=20 format=3 uid="uid://d4jvwk0xsciqc"]
+
+[ext_resource type="Texture2D" uid="uid://jcus8k3wl73p" path="res://assets/fireflies/Animation8 (0).png" id="1_jk4d2"]
+[ext_resource type="Texture2D" uid="uid://ds3nt1d70etey" path="res://assets/fireflies/Animation8 (1).png" id="2_dodxe"]
+[ext_resource type="Texture2D" uid="uid://d4ar8k8j2mfhr" path="res://assets/fireflies/Animation8 (2).png" id="3_200no"]
+[ext_resource type="Texture2D" uid="uid://c2jmltu7ihx6k" path="res://assets/fireflies/Animation8 (3).png" id="4_nwgua"]
+[ext_resource type="Texture2D" uid="uid://cox6wakepybeb" path="res://assets/fireflies/Animation8 (4).png" id="5_75lni"]
+[ext_resource type="Texture2D" uid="uid://cspybenmipmxb" path="res://assets/fireflies/Animation8 (5).png" id="6_u2y5l"]
+[ext_resource type="Texture2D" uid="uid://ce4odm1aw6l8g" path="res://assets/fireflies/Animation8 (6).png" id="7_5gt5o"]
+[ext_resource type="Texture2D" uid="uid://wgmnxvm564wu" path="res://assets/fireflies/Animation8 (7).png" id="8_0xipc"]
+[ext_resource type="Texture2D" uid="uid://ccp148nlyagwv" path="res://assets/fireflies/Animation8 (8).png" id="9_ox6c3"]
+[ext_resource type="Texture2D" uid="uid://clwmd7yfkn13b" path="res://assets/fireflies/Animation8 (9).png" id="10_eoo8r"]
+[ext_resource type="Texture2D" uid="uid://6j6722siiaee" path="res://assets/fireflies/Animation8 (10).png" id="11_jkahh"]
+[ext_resource type="Texture2D" uid="uid://b3udgcyukh828" path="res://assets/fireflies/Animation8 (11).png" id="12_phxt4"]
+[ext_resource type="Texture2D" uid="uid://cxgxha84km27" path="res://assets/fireflies/Animation8 (12).png" id="13_icrdh"]
+[ext_resource type="Texture2D" uid="uid://c5e2cyglo22kc" path="res://assets/fireflies/Animation8 (13).png" id="14_7op1p"]
+[ext_resource type="Texture2D" uid="uid://b7m5hg5rmsjul" path="res://assets/fireflies/Animation8 (14).png" id="15_cegpr"]
+[ext_resource type="Texture2D" uid="uid://cb4ld8v7iylil" path="res://assets/fireflies/Animation8 (15).png" id="16_vu1in"]
+[ext_resource type="Texture2D" uid="uid://dlgryetv2jpgh" path="res://assets/fireflies/Animation8 (16).png" id="17_jpliv"]
+[ext_resource type="Texture2D" uid="uid://danw3xpttfyf0" path="res://assets/fireflies/Animation8 (17).png" id="18_vfd6l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymo0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jk4d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dodxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_200no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nwgua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_75lni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u2y5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5gt5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0xipc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ox6c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eoo8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jkahh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_phxt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_icrdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7op1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cegpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vu1in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jpliv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vfd6l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Fireflies" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ymo0k")
+autoplay = "default"
+frame_progress = 0.284157

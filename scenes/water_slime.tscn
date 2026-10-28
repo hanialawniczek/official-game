@@ -1,0 +1,91 @@
+[gd_scene load_steps=17 format=3 uid="uid://bvtlxi5cijp41"]
+
+[ext_resource type="Texture2D" uid="uid://d3l4sigtftvpg" path="res://assets/water slime idle/Animation5 (1).png" id="1_hiq0m"]
+[ext_resource type="Script" path="res://scripts/water_slime.gd" id="1_ts3hx"]
+[ext_resource type="Texture2D" uid="uid://c8d07eoyj1agn" path="res://assets/water slime idle/Animation5 (2).png" id="2_mri1r"]
+[ext_resource type="Texture2D" uid="uid://ne68h8cqj4mx" path="res://assets/water slime idle/Animation5 (3).png" id="3_f4wgh"]
+[ext_resource type="Texture2D" uid="uid://cmn07am53g8ap" path="res://assets/water slime idle/Animation5 (4).png" id="4_on7ms"]
+[ext_resource type="Texture2D" uid="uid://ddcdb3078adwg" path="res://assets/water slime idle/Animation5 (5).png" id="5_a6n6f"]
+[ext_resource type="Texture2D" uid="uid://bfucscslla8qr" path="res://assets/water slime idle/Animation5 (6).png" id="6_h5tcv"]
+[ext_resource type="Texture2D" uid="uid://cb3saeunjk73i" path="res://assets/water slime idle/Animation5 (7).png" id="7_tnhmp"]
+[ext_resource type="Texture2D" uid="uid://cwqbyj6m6dlul" path="res://assets/water slime idle/Animation5 (8).png" id="8_3avwx"]
+[ext_resource type="Texture2D" uid="uid://cwvdaib8sy3td" path="res://assets/water slime idle/Animation5 (9).png" id="9_bhi70"]
+[ext_resource type="Texture2D" uid="uid://b67fdtlmdmgju" path="res://assets/water slime idle/Animation5 (10).png" id="10_gd3q8"]
+[ext_resource type="Texture2D" uid="uid://c7vpgpvbsubp0" path="res://assets/water slime idle/Animation5 (11).png" id="11_sl6rr"]
+[ext_resource type="Texture2D" uid="uid://8n1r5pgd0yj8" path="res://assets/water slime idle/Animation5.png" id="12_hnxlr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7r2lx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hiq0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mri1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f4wgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_on7ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a6n6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h5tcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tnhmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3avwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bhi70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gd3q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sl6rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hnxlr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rppvu"]
+radius = 108.0
+height = 296.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yr0rk"]
+radius = 87.0
+height = 218.0
+
+[node name="waterSlime" type="CharacterBody2D"]
+script = ExtResource("1_ts3hx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7r2lx")
+autoplay = "default"
+frame_progress = 0.076635
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="death" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 93)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rppvu")
+
+[node name="slimeBody" type="CollisionShape2D" parent="."]
+position = Vector2(0, 107)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_yr0rk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

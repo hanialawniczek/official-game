@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dawmda8mi7rnh"]
+
+[ext_resource type="Script" path="res://scripts/water_body.gd" id="1_forgl"]
+[ext_resource type="Script" path="res://scripts/smooth_path.gd" id="2_1042d"]
+
+[sub_resource type="Curve2D" id="Curve2D_3eer1"]
+
+[node name="water_body" type="Node2D"]
+script = ExtResource("1_forgl")
+
+[node name="water_polygon" type="Polygon2D" parent="."]
+color = Color(0, 0.467667, 0.61, 0.545098)
+
+[node name="water_border" type="Path2D" parent="."]
+curve = SubResource("Curve2D_3eer1")
+script = ExtResource("2_1042d")
+spline_length = 70

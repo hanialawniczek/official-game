@@ -1,0 +1,115 @@
+[gd_scene load_steps=22 format=3 uid="uid://c5fkixfqr0oll"]
+
+[ext_resource type="Script" path="res://scripts/mushroom_enymies.gd" id="1_283b6"]
+[ext_resource type="Texture2D" uid="uid://cygp2agd301x0" path="res://assets/firefly/1.png" id="2_gdqek"]
+[ext_resource type="Texture2D" uid="uid://cx8hojqlseeey" path="res://assets/firefly/2.png" id="3_46tq0"]
+[ext_resource type="Texture2D" uid="uid://ctid1o4ac0jcn" path="res://assets/firefly/3.png" id="4_h7pfq"]
+[ext_resource type="Texture2D" uid="uid://b5r1f7ohdwyag" path="res://assets/firefly/4.png" id="5_agr78"]
+[ext_resource type="Texture2D" uid="uid://db4thrmfgdm33" path="res://assets/firefly/5.png" id="6_23qnk"]
+[ext_resource type="Texture2D" uid="uid://c456xe17j1c8d" path="res://assets/firefly/6.png" id="7_07yn5"]
+[ext_resource type="Texture2D" uid="uid://3ejg5gvskmyl" path="res://assets/firefly/7.png" id="8_rytk5"]
+[ext_resource type="Texture2D" uid="uid://c6tlwcfw6unsv" path="res://assets/firefly/8.png" id="9_43206"]
+[ext_resource type="Texture2D" uid="uid://clsga2c823yrq" path="res://assets/firefly/9.png" id="10_tsvwn"]
+[ext_resource type="Texture2D" uid="uid://bggmqgelforoi" path="res://assets/firefly/10.png" id="11_n6ys8"]
+[ext_resource type="Texture2D" uid="uid://c8hvn1agumt46" path="res://assets/firefly/11.png" id="12_vq8pc"]
+[ext_resource type="Texture2D" uid="uid://bk1p2r2qsr446" path="res://assets/firefly/12.png" id="13_abmk3"]
+[ext_resource type="Texture2D" uid="uid://byuisfekx51ki" path="res://assets/firefly/13.png" id="14_ex8d1"]
+[ext_resource type="Texture2D" uid="uid://ckiawukh4up2n" path="res://assets/firefly/14.png" id="15_ign4r"]
+[ext_resource type="Texture2D" uid="uid://dbdlyl6jwr7ed" path="res://assets/firefly/15.png" id="16_5h5r3"]
+[ext_resource type="Texture2D" uid="uid://cw5xhgyah1oj0" path="res://assets/firefly/16.png" id="17_rj38b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f2oly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gdqek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_46tq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h7pfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_agr78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_23qnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_07yn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rytk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_43206")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tsvwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n6ys8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vq8pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_abmk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ex8d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ign4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5h5r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rj38b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3iig3"]
+radius = 40.0
+height = 152.052
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3m2jk"]
+radius = 51.0
+height = 176.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aiqi8"]
+radius = 2021.83
+
+[node name="mushroomEnemy" type="CharacterBody2D" groups=["Characters"]]
+script = ExtResource("1_283b6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f2oly")
+autoplay = "default"
+frame_progress = 0.324353
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-20, 46)
+rotation = -0.614061
+shape = SubResource("CapsuleShape2D_3iig3")
+
+[node name="dmg" type="Area2D" parent="."]
+
+[node name="death" type="CollisionShape2D" parent="dmg"]
+position = Vector2(-21, 45)
+rotation = -0.603354
+shape = SubResource("CapsuleShape2D_3m2jk")
+
+[node name="tracking" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tracking"]
+shape = SubResource("CircleShape2D_aiqi8")
+
+[connection signal="body_entered" from="dmg" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="tracking" to="." method="_on_tracking_body_entered"]
+[connection signal="body_exited" from="tracking" to="." method="_on_tracking_body_exited"]

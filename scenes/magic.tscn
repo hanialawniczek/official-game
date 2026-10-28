@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwudtjcajftb8"]
+
+[sub_resource type="Gradient" id="Gradient_n2ath"]
+offsets = PackedFloat32Array(0, 0.273333, 0.853333, 1)
+colors = PackedColorArray(0.917882, 0.728383, 0.577615, 1, 0.889484, 0.418765, 1.92523e-07, 1, 0.964706, 0, 0, 1, 1, 1, 1, 0)
+
+[node name="Magic" type="Node"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 6000
+speed_scale = 0.5
+randomness = 0.86
+emission_shape = 1
+emission_sphere_radius = 94.38
+gravity = Vector2(-300, 980)
+linear_accel_max = 66.67
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+color_ramp = SubResource("Gradient_n2ath")

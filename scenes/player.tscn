@@ -1,0 +1,250 @@
+[gd_scene load_steps=48 format=3 uid="uid://bvy0wgi7m3oir"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_1ywhm"]
+[ext_resource type="Texture2D" uid="uid://dra4qwts072jm" path="res://assets/girl idle animation/Animation3 (1).png" id="1_8y64f"]
+[ext_resource type="Texture2D" uid="uid://b88jkhhkg58xy" path="res://assets/girl idle animation/Animation3 (2).png" id="2_6t2a8"]
+[ext_resource type="Texture2D" uid="uid://bpjm3spwmrp86" path="res://assets/freezed girl.png" id="2_b8nbp"]
+[ext_resource type="Texture2D" uid="uid://b12luw4pbue0" path="res://assets/girl idle animation/Animation3 (3).png" id="3_li15g"]
+[ext_resource type="Texture2D" uid="uid://dw648aj0b68pd" path="res://assets/girl idle animation/Animation3 (4).png" id="4_6746p"]
+[ext_resource type="Texture2D" uid="uid://jc4xw4tio6ag" path="res://assets/girl idle animation/Animation3 (5).png" id="5_xky2b"]
+[ext_resource type="Texture2D" uid="uid://c04u1npcwtasn" path="res://assets/girl idle animation/Animation3 (6).png" id="6_2j1sr"]
+[ext_resource type="Texture2D" uid="uid://bj3thwtfqdddt" path="res://assets/girl idle animation/Animation3 (7).png" id="7_tthw1"]
+[ext_resource type="Texture2D" uid="uid://2sbgqc5vtcld" path="res://assets/girl idle animation/Animation3 (8).png" id="8_jmhae"]
+[ext_resource type="Texture2D" uid="uid://cdlyh5nm77taw" path="res://assets/girl idle animation/Animation3 (9).png" id="9_8e50l"]
+[ext_resource type="Texture2D" uid="uid://cw81yibnh68el" path="res://assets/girl idle animation/Animation3 (10).png" id="10_cyj3h"]
+[ext_resource type="Texture2D" uid="uid://1rvp7bx6l171" path="res://assets/girl idle animation/Animation3 (11).png" id="11_l1x2u"]
+[ext_resource type="Texture2D" uid="uid://cyknjkymibdr3" path="res://assets/girl idle animation/Animation3 (12).png" id="12_2wtqv"]
+[ext_resource type="Texture2D" uid="uid://c4jkfulv2oqde" path="res://assets/girl idle animation/Animation3 (13).png" id="13_no3li"]
+[ext_resource type="Texture2D" uid="uid://bfh6t013cfl4q" path="res://assets/girl idle animation/Animation3 (14).png" id="14_ql6nn"]
+[ext_resource type="Texture2D" uid="uid://cdiaco2slk4cj" path="res://assets/girl idle animation/Animation3 (15).png" id="15_ysmua"]
+[ext_resource type="Texture2D" uid="uid://v62frv8bn8ue" path="res://assets/girl idle animation/Animation3 (16).png" id="16_wrsc1"]
+[ext_resource type="Texture2D" uid="uid://buvwbuprn4ers" path="res://assets/girl idle animation/Animation3 (17).png" id="17_uknti"]
+[ext_resource type="Texture2D" uid="uid://b8o7bccgdhrqo" path="res://assets/girl idle animation/Animation3 (18).png" id="18_aae3v"]
+[ext_resource type="Texture2D" uid="uid://bximotk7b0icm" path="res://assets/girl idle animation/Animation3 (19).png" id="19_ub3ys"]
+[ext_resource type="Texture2D" uid="uid://3g7caxy4ccm3" path="res://assets/girl idle animation/Animation3 (20).png" id="20_jxuq2"]
+[ext_resource type="Texture2D" uid="uid://dkj64hvehloh7" path="res://assets/girl idle animation/Animation3 (21).png" id="21_6firi"]
+[ext_resource type="Texture2D" uid="uid://cldiln6t2c4tv" path="res://assets/girl idle animation/Animation3.png" id="22_mlk72"]
+[ext_resource type="Texture2D" uid="uid://dyhxuqhe3c5fk" path="res://assets/girl run animation/Animation2.png" id="23_awkdv"]
+[ext_resource type="Texture2D" uid="uid://b5icyyk6kg7io" path="res://assets/girl run animation/Animation2 (21).png" id="24_ujxju"]
+[ext_resource type="Texture2D" uid="uid://c7pnl4sth1wdr" path="res://assets/girl run animation/Animation2 (20).png" id="25_14iiv"]
+[ext_resource type="Texture2D" uid="uid://cfmpls3q45n7f" path="res://assets/girl run animation/Animation2 (19).png" id="26_0kgyi"]
+[ext_resource type="Texture2D" uid="uid://dpn5v8n5bqtgd" path="res://assets/girl run animation/Animation2 (18).png" id="27_t5xlo"]
+[ext_resource type="Texture2D" uid="uid://caesyiixhobff" path="res://assets/girl run animation/Animation2 (17).png" id="28_nhqs5"]
+[ext_resource type="Texture2D" uid="uid://xgn742yrib5b" path="res://assets/girl run animation/Animation2 (16).png" id="29_bogu3"]
+[ext_resource type="Texture2D" uid="uid://dqrpb4e2msahk" path="res://assets/girl run animation/Animation2 (15).png" id="30_asyuk"]
+[ext_resource type="Texture2D" uid="uid://cj5jpamgnpq50" path="res://assets/girl run animation/Animation2 (14).png" id="31_5we8f"]
+[ext_resource type="Texture2D" uid="uid://be5gwsc48gu4h" path="res://assets/girl run animation/Animation2 (13).png" id="32_ppx4x"]
+[ext_resource type="Texture2D" uid="uid://cnubgj8kw4wfm" path="res://assets/girl run animation/Animation2 (12).png" id="33_bl5dr"]
+[ext_resource type="Texture2D" uid="uid://b14oe7vtgugy7" path="res://assets/girl run animation/Animation2 (11).png" id="34_6b0q0"]
+[ext_resource type="Texture2D" uid="uid://dvh1r5w1m1rg0" path="res://assets/girl run animation/Animation2 (10).png" id="35_twd2a"]
+[ext_resource type="Texture2D" uid="uid://cv8c627fsqhn7" path="res://assets/girl run animation/Animation2 (9).png" id="36_vr2ru"]
+[ext_resource type="Texture2D" uid="uid://dj3yuhu4ap4h0" path="res://assets/girl run animation/Animation2 (8).png" id="37_c4dyi"]
+[ext_resource type="Texture2D" uid="uid://j7g5r640ala7" path="res://assets/girl run animation/Animation2 (1).png" id="38_xwvua"]
+[ext_resource type="Texture2D" uid="uid://crcn2q6u1jc3b" path="res://assets/elements/water droplet.png" id="40_1ivp3"]
+[ext_resource type="Texture2D" uid="uid://bdqnoh3mcfnnl" path="res://assets/elements/vapour.png" id="41_xq33h"]
+[ext_resource type="Texture2D" uid="uid://b7r60wflgauxs" path="res://assets/elements/snowflake.png" id="42_nmcjh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvst4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b8nbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b8nbp")
+}],
+"loop": true,
+"name": &"freezed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8y64f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6t2a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_li15g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6746p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xky2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2j1sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tthw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jmhae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8e50l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cyj3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l1x2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2wtqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_no3li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ql6nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ysmua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wrsc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uknti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_aae3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ub3ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jxuq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6firi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mlk72")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_xwvua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_c4dyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_vr2ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_twd2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_6b0q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_bl5dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ppx4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5we8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_asyuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bogu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_nhqs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_t5xlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0kgyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_14iiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ujxju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_awkdv")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2qyib"]
+radius = 45.0
+height = 392.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sayai"]
+bg_color = Color(0, 0.143752, 0.340581, 0.113725)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqxtm"]
+bg_color = Color(0.898039, 0.937255, 1, 0.537255)
+
+[node name="Player" type="CharacterBody2D" groups=["Characters", "Player"]]
+script = ExtResource("1_1ywhm")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 250)
+collide_with_areas = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kvst4")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.70851
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_2qyib")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -320)
+zoom = Vector2(0.3, 0.3)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -296.0
+offset_top = -335.0
+offset_right = 293.0
+offset_bottom = -280.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_sayai")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wqxtm")
+value = 50.0
+show_percentage = false
+
+[node name="Water" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(370.5, -313)
+scale = Vector2(0.660156, 0.585938)
+texture = ExtResource("40_1ivp3")
+
+[node name="Vapour" type="Sprite2D" parent="."]
+position = Vector2(370, -309)
+scale = Vector2(0.65625, 0.640625)
+texture = ExtResource("41_xq33h")
+
+[node name="Snowflake" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(367.5, -306)
+scale = Vector2(0.691406, 0.695313)
+texture = ExtResource("42_nmcjh")

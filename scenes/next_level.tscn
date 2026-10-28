@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://balyjfhmbghk5"]
+
+[ext_resource type="Script" path="res://scripts/next_level.gd" id="1_jcvgg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5r01a"]
+size = Vector2(100.5, 3627)
+
+[node name="nextLevel" type="Area2D"]
+script = ExtResource("1_jcvgg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5r01a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

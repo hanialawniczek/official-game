@@ -1,0 +1,91 @@
+[gd_scene load_steps=17 format=3 uid="uid://bj1fr5hl2l0nq"]
+
+[ext_resource type="Script" path="res://scripts/ice_slime.gd" id="1_4dp3y"]
+[ext_resource type="Texture2D" uid="uid://duae2pwbf0nug" path="res://assets/ice slime idle/1.png" id="2_al2hc"]
+[ext_resource type="Texture2D" uid="uid://d0nmu3ko1nfpu" path="res://assets/ice slime idle/2.png" id="3_v0g2i"]
+[ext_resource type="Texture2D" uid="uid://2dpkd3flf7ng" path="res://assets/ice slime idle/3.png" id="4_kys5g"]
+[ext_resource type="Texture2D" uid="uid://epw5eiednrau" path="res://assets/ice slime idle/4.png" id="5_5l7ms"]
+[ext_resource type="Texture2D" uid="uid://c53rqbkoplecq" path="res://assets/ice slime idle/5.png" id="6_rf2w7"]
+[ext_resource type="Texture2D" uid="uid://bi0j3owi3eqwn" path="res://assets/ice slime idle/6.png" id="7_vthfe"]
+[ext_resource type="Texture2D" uid="uid://ljth2cvx66xk" path="res://assets/ice slime idle/7.png" id="8_6kb4p"]
+[ext_resource type="Texture2D" uid="uid://bm1xidvnh7kb4" path="res://assets/ice slime idle/8.png" id="9_08s6u"]
+[ext_resource type="Texture2D" uid="uid://uhophkudtuq" path="res://assets/ice slime idle/9.png" id="10_7v444"]
+[ext_resource type="Texture2D" uid="uid://c663jv5kalq3" path="res://assets/ice slime idle/10.png" id="11_t1fhi"]
+[ext_resource type="Texture2D" uid="uid://gp55ou4vfjp4" path="res://assets/ice slime idle/11.png" id="12_wuiy0"]
+[ext_resource type="Texture2D" uid="uid://cic0jm3enbx3c" path="res://assets/ice slime idle/12.png" id="13_cj2rc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7r2lx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_al2hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v0g2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kys5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5l7ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rf2w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vthfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6kb4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_08s6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7v444")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_t1fhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wuiy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cj2rc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rppvu"]
+radius = 108.0
+height = 296.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yr0rk"]
+radius = 87.0
+height = 218.0
+
+[node name="iceSlime" type="CharacterBody2D"]
+script = ExtResource("1_4dp3y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7r2lx")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="death" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 93)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rppvu")
+
+[node name="slimeBody" type="CollisionShape2D" parent="."]
+position = Vector2(0, 107)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_yr0rk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

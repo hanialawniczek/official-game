@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd17if1ogalfl"]
+
+[ext_resource type="Texture2D" uid="uid://mrnlacskhwaa" path="res://assets/feather/1.png" id="1_gj84j"]
+[ext_resource type="Texture2D" uid="uid://blbvjmtnrx4oa" path="res://assets/feather/2.png" id="2_804mg"]
+[ext_resource type="Texture2D" uid="uid://b0jhuskvy604" path="res://assets/feather/3.png" id="3_jli41"]
+[ext_resource type="Texture2D" uid="uid://bx2e0lmahbnha" path="res://assets/feather/4.png" id="4_o3ojd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvrgx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gj84j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_804mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jli41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o3ojd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="interphase" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1824.0
+offset_top = 26.0
+offset_right = 1891.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1750, 51)
+scale = Vector2(0.375, 0.369141)
+sprite_frames = SubResource("SpriteFrames_kvrgx")
+autoplay = "default"
