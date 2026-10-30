@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var health_bar: ProgressBar = $HealthBar
+@onready var label: Label = $Label
 
 
 const SPEED = 700.0
@@ -19,7 +20,7 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	
 	health_bar.value = hp
-	
+	label.text = str(GameManager.feathers)
 	
 	# Add the gravity.
 	if not is_on_floor():

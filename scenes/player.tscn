@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bvy0wgi7m3oir"]
+[gd_scene load_steps=53 format=3 uid="uid://bvy0wgi7m3oir"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1ywhm"]
 [ext_resource type="Texture2D" uid="uid://dra4qwts072jm" path="res://assets/girl idle animation/Animation3 (1).png" id="1_8y64f"]
@@ -43,6 +43,10 @@
 [ext_resource type="Texture2D" uid="uid://crcn2q6u1jc3b" path="res://assets/elements/water droplet.png" id="40_1ivp3"]
 [ext_resource type="Texture2D" uid="uid://bdqnoh3mcfnnl" path="res://assets/elements/vapour.png" id="41_xq33h"]
 [ext_resource type="Texture2D" uid="uid://b7r60wflgauxs" path="res://assets/elements/snowflake.png" id="42_nmcjh"]
+[ext_resource type="Texture2D" uid="uid://mrnlacskhwaa" path="res://assets/feather/1.png" id="44_j3c5v"]
+[ext_resource type="Texture2D" uid="uid://blbvjmtnrx4oa" path="res://assets/feather/2.png" id="45_3k7cu"]
+[ext_resource type="Texture2D" uid="uid://b0jhuskvy604" path="res://assets/feather/3.png" id="46_4r0x3"]
+[ext_resource type="Texture2D" uid="uid://bx2e0lmahbnha" path="res://assets/feather/4.png" id="47_g1fci"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kvst4"]
 animations = [{
@@ -197,6 +201,26 @@ border_color = Color(1, 1, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqxtm"]
 bg_color = Color(0.898039, 0.937255, 1, 0.537255)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_7lg68"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_j3c5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3k7cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_4r0x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_g1fci")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D" groups=["Characters", "Player"]]
 script = ExtResource("1_1ywhm")
 
@@ -248,3 +272,22 @@ visible = false
 position = Vector2(367.5, -306)
 scale = Vector2(0.691406, 0.695313)
 texture = ExtResource("42_nmcjh")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 44.0
+offset_top = -523.5
+offset_right = 164.0
+offset_bottom = -383.5
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 100
+text = "0"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-71.75, -482.25)
+scale = Vector2(0.900391, 0.912109)
+sprite_frames = SubResource("SpriteFrames_7lg68")
+autoplay = "default"
+frame_progress = 0.537347

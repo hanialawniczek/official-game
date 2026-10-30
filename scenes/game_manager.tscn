@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsn8jenbsrebk"]
+[gd_scene load_steps=2 format=3 uid="uid://bsn8jenbsrebk"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_nq2ud"]
-[ext_resource type="PackedScene" uid="uid://bd17if1ogalfl" path="res://scenes/interphase.tscn" id="2_47xgo"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_nq2ud")
-
-[node name="interphase" parent="." instance=ExtResource("2_47xgo")]

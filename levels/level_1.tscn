@@ -458,7 +458,7 @@ tile_set = SubResource("TileSet_ixikm")
 position = Vector2(21160, -9156)
 
 [node name="Player" parent="." instance=ExtResource("6_ri4i8")]
-position = Vector2(-3737, 331)
+position = Vector2(-3424, 414)
 
 [node name="RespawnPoint" type="Node2D" parent="."]
 unique_name_in_owner = true
